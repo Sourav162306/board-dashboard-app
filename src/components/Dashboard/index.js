@@ -83,7 +83,7 @@ const Dashboard = () => {
       <div className="main-product-sections">
         <div className='product-container'>
           <p>Hello <strong>{validUser}</strong>, Welcome to dashboard.</p>
-          <p>You have registered with <strong>{validEmail}</strong> this emailid.</p>
+          <p>You have registered with <strong>{validEmail}</strong> this email.</p>
           <div className='big-container-main'>
             <div className='big-cart-container'>
               <FaSortAmountDownAlt className="" />
