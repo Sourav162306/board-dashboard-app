@@ -1,8 +1,9 @@
 import {AiFillDashboard, AiFillFacebook, AiFillInstagram, AiFillLinkedin, AiFillTwitterCircle, AiFillGithub, AiFillCopyrightCircle} from 'react-icons/ai'
 import {FaBtc, FaLocationArrow} from 'react-icons/fa'
-import {IoIosCopy} from 'react-icons/io'
+import {IoIosCopy, IoIosContact} from 'react-icons/io'
 import {HiUsers, HiOutlinePhoneMissedCall} from 'react-icons/hi'
 import {FiSettings, FiMail} from 'react-icons/fi'
+import {BiHelpCircle} from 'react-icons/bi'
 
 import './index.css'
 
@@ -31,6 +32,14 @@ const Footer = () => (
                     <div className="footer-items-container-main">
                         <FiSettings className="footer-new-react-icons" />
                         <a href="/settings">Settings</a>
+                    </div>
+                    <div className="footer-items-container-main">
+                        <BiHelpCircle className="footer-new-react-icons" />
+                        <a href="/help">Help</a>
+                    </div>
+                    <div className="footer-items-container-main">
+                        <IoIosContact className="footer-new-react-icons" />
+                        <a href="/contact-us">Contact us</a>
                     </div>
                 </div>
                 {/*  */}
