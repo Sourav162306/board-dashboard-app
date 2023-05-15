@@ -1,6 +1,6 @@
-import { withRouter} from 'react-router-dom'
+import { Redirect, withRouter} from 'react-router-dom'
 import { useAuth0 } from '@auth0/auth0-react'
-// import Cookies from 'js-cookie'
+import Cookies from 'js-cookie'
 import {AiFillDashboard, AiFillCopyrightCircle} from 'react-icons/ai'
 import {FaBtc} from 'react-icons/fa'
 import {IoIosCopy} from 'react-icons/io'
@@ -12,12 +12,14 @@ import './index.css'
 
 const Header = props => {
   const {logout} = useAuth0()
-  // const logout = () => {
-  //   Cookies.remove('get_user')
-  //   return(
-  //     <Redirect to="/login" />
-  //   )
-  // }
+  const logoutMain = () => {
+    Cookies.remove('get_user')
+    logout()
+    return(
+
+      <Redirect to="/login" />
+    )
+  }
   const {pageTitle} = props
 
   return (
@@ -38,7 +40,7 @@ const Header = props => {
           <button
             type="button"
             className="logout-desktop-btn"
-            onClick={logout}
+            onClick={logoutMain}
           >
             Logout
           </button>

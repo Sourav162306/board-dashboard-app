@@ -2,7 +2,7 @@ import './index.css'
 
 const User = props => {
   const {userData} = props
-  const {name, username, email, address, phone, website, company} = userData
+  const {name, username, email, phone, website} = userData
 
   return (
     <div className='user-container'>
