@@ -53,7 +53,7 @@
     max-width: 540px !important;
   }
 }
-@media(max-width: 1440px) {
+@media(max-width: 2000px) {
   .nav-bar-large-container {
     max-width: 1110px !important;
   }
