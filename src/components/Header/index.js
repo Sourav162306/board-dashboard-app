@@ -10,8 +10,15 @@ import {GrLogout} from 'react-icons/gr'
 
 import './index.css'
 
+let validUserImage;
+
 const Header = props => {
-  const {logout} = useAuth0()
+  const {logout, user} = useAuth0()
+
+  if(user !== undefined){
+    // console.log(user.picture)
+    validUserImage = user.picture
+  }
   const logoutMain = () => {
     Cookies.remove('get_user')
     logout()
@@ -27,23 +34,49 @@ const Header = props => {
       <div className="nav-content">
         <div className="nav-bar-mobile-logo-container">
           <h1>{pageTitle}</h1>
-          <button type="button" className="nav-mobile-btn">
+          <div className='header-right-container'>
+            {/* <input
+            type="text"
+            id="searchbar"
+            placeholder='Search'
+            className="username-input-field"
+            /> */}
+            <img 
+            src={validUserImage}
+            alt="user-img"
+            className="user-main-img"
+            />
+            <button type="button" className="nav-mobile-btn">
             <GrLogout
               className='log-out-logo'
               onClick={logout}
             />
-          </button>
+            </button>
+          </div>
         </div>
 
         <div className="nav-bar-large-container">
           <h1>{pageTitle}</h1>
-          <button
-            type="button"
-            className="logout-desktop-btn"
-            onClick={logoutMain}
-          >
-            Logout
-          </button>
+          <div className='header-right-container'>
+              <input
+              type="text"
+              id="searchbar"
+              placeholder='Search'
+              className="username-input-field"
+              />
+              <img 
+              src={validUserImage}
+              alt="user-img"
+              className="user-main-img"
+              />
+              <button
+                type="button"
+                className="logout-desktop-btn"
+                onClick={logoutMain}
+              >
+                Logout
+              </button>
+          </div>
         </div>
       </div>
       <div className="sidenav">
