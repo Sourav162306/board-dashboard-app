@@ -11,11 +11,11 @@ React Icons
 
 Functional Parts :
 1. User Signup Page & Login Page using google login.
-2. After Login User can go to dasboard and other feature parts.
-3. If users in not loggedin , they cannot access the dashboard.
-4. I dont have any database to store the user login data. So login form is not working. User can easily login or sign up using 
+2. After Login User can go to dashboard and other feature parts.
+3. If users are not logged in , they cannot access the dashboard. 
+4. No database is connected to store the user login data. So login form is not working. User can easily login or sign up using 
    google authentication and access the dashboard.
-5. The UI is userfriendly and responsive for mobile, tablet and desktop ie. all of the devices.
+5. The UI is user friendly and responsive for mobile, tablet and desktop ie. all of the devices.
 
 
 Design And Developed By :
